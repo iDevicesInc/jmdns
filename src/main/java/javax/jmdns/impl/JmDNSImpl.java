@@ -899,7 +899,8 @@ public class JmDNSImpl extends JmDNS implements DNSStatefulObject, DNSTaskStarte
         }
     }
 
-    private void submit(Runnable runnable) {
+
+    public void submit(Runnable runnable) {
         if (!_executor.isShutdown()) {
             _executor.submit(runnable);
         }
